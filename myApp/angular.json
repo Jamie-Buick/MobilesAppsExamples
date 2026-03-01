@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ex1": {
+    "myApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ex1",
+            "outputPath": "dist/my-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -54,12 +54,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -89,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ex1:build:production"
+              "buildTarget": "myApp:build:production"
             },
             "development": {
-              "buildTarget": "ex1:build:development"
+              "buildTarget": "myApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -122,5 +117,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "91819cfb-400b-4e8c-9d42-a552f8d0f6d5"
   }
 }
