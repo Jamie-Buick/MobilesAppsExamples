@@ -1,0 +1,7 @@
+<h1>People</h1>
+
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+    <br>
+    <input [(ngModel)]="input"> <button (click)="addName()">Add</button><button (click)="removeLast()">Remove</button>
+</ol>
